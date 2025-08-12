@@ -2,88 +2,84 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-     <title>Meu Portfólio</title>
+    <title>Meu Portfólio</title>
 </head>
 <body>
-    <nav class="navegacao">
-        <ul class="menu">
-            <li>
-                <a href="#início" class="menu-link">Inicío</a>
-            </li>
-            <li>
-                <a href="#sobre"class="menu-link" >Sobre</a>
-            </li>
-            <li>
-                <a href="#habilidaes"class="menu-link" >Habilidades</a>
-            </li>
-            <li>
-                <a href="#projetos"class="menu-link" >Projetos</a>
-            </li>
-            </li>
-            <li>
-                <a href="#contato"class="menu-link" >Contato</a>
-            </li>
-         </ul>
-    </nav>
-    <main id="início" class="cabecalho">
-        <div>
-            <img src="./img/evelyn.jpg" alt="Foto de Evelyn" class="foto-perfil"> 
-            <h1>Olá, eu sou a Evelyn!</h1>
-            <p>Sou uma desenvolvedora web apaixonada por criar experiências digitais incríveis.</p>
+    <header class="cabecalho">
+        <nav class="navegacao">
+            <ul class="menu">
+                <li><a href="#inicio" class="menu-link">Início</a></li>
+                <li><a href="#sobre" class="menu-link">Sobre</a></li>
+                <li><a href="#habilidades" class="menu-link">Habilidades</a></li>
+                <li><a href="#projetos" class="menu-link">Projetos</a></li>
+                <li><a href="#contato" class="menu-link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="inicio" class="corpo inicio-content">
+        <div class="profile-image-container">
+            <img src="./img/evelyn.jpg" alt="Foto de Perfil" class="foto-perfil">
+        </div>
+
+        <div class="profile-info">
+            <h1>Portfólio de Evelyn</h1>
+            <p>Desenvolvedora Web Apaixonada por Criar Experiências Digitais Incríveis.</p>
         </div>
     </main>
-    <section id="sobre" class="sobre">
-        <h2 class=""sobre-titulo>Sobre Mim</h2>
-        <div class="Sobre-descrição"></div>
-        <p class="sobre-paragrafo">
-           Sou uma desenvolvedora apaixonada por tecnologia e inovação. Com 2 anos de experiência em tecnologia, tenho um forte interesse em construir aplicações web roubustas e intuitivas. 
-           Minha jornada na programação teve início inspirado pelo meu pai, um excelente programador. Desde então, venho me dedicando continuamente a aprender novas tecnologias e aperfeiçoar minhas habilidades, sempre em busca de desenvolver soluções criativas e de alta qualidade.
-           </p>
-           <div>
-    </section >
- </section >
-    <section id="projetos" class="projetos">
-        <h2 clas="projetos-titulo">Projetos</h2>
-        <section>
-            <div class="projetos-titulo">
-           </div class="projetos-titulo">
-           <img src="./imag/evelyn.jpg" alt="Imagem do Projeto" class="imagem-projeto">
-           <h3 class="info-projeto">Pat Amiga</h3>
-           <p class="descrição-projeto">Um site dedicado a conectar pessoas com animais. </p>
-            <div>
-                 <div class="projetos-titulo">
-           </div class="projetos-titulo">
-           <img src="./imag/evelyn.jpg" alt="Imagem do Projeto" class="imagem-projeto">
-           <h3 class="info-projeto">Grupo de Amigos</h3>
-           <p class="descrição-projeto">Um site dedicado a conectar pessoas com animais. </p>
-            <div>
-                 <div class="projetos-titulo">
-           </div class="projetos-titulo">
-           <img src="./imag/evelyn.jpg" alt="Imagem do Projeto" class="imagem-projeto">
-           <h3 class="info-projeto">Hora de Maratonar</h3>
-           <p class="descrição-projeto">Um site dedicado a conectar pessoas com animais. </p>
-            <div>
-                 <div class="projetos-titulo">
-           </div class="projetos-titulo">
-           <img src="./imag/evelyn.jpg" alt="Imagem do Projeto" class="imagem-projeto">
-           <h3 class="info-projeto">Sistema Educacional</h3>
-           <p class="descrição-projeto">Um site dedicado a conectar pessoas com animais. </p>
-            <div>
-            </section>
-            <section id="contato">
-                <h2 class="contato-titulo">Contato</h2>
-                <form class="formulario-contato" id="formulario">
-                <div class="nome-form">
-                   <input placeholder="Nome" class="campo-form">
-                <div>
-                    <div class="grupo-form">
-                    <textarea class="text-form" placecholder="Digite sua Mesagem"></textarea>
-                 </div>
 
-                </form>
-            </section>
-       
- </body>     
+    <section id="sobre" class="sobre corpo">
+        <h2>Sobre Mim</h2>
+        <p>Sou uma desenvolvedora apaixonada por tecnologia e inovação. Com 2 anos de experiência, tenho um forte interesse em construir aplicações web robustas e intuitivas. Minha jornada na programação teve início inspirada pelo meu pai, um excelente programador. Desde então, venho me dedicando continuamente a aprender novas tecnologias e aperfeiçoar minhas habilidades, sempre em busca de desenvolver soluções criativas e de alta qualidade.</p>
+    </section>
+
+    <section id="habilidades" class="habilidades corpo">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Git & GitHub</li>
+        </ul>
+    </section>
+
+    <section id="projetos" class="projetos corpo">
+        <h2>Projetos</h2>
+        <div class="projeto-grid">
+            <div class="projeto-item">
+                <h3>Pat Amiga</h3>
+                <p>Um site dedicado a conectar pessoas com animais.</p>
+            </div>
+            <div class="projeto-item">
+                <h3>Grupo de Amigos</h3>
+                <p>Um site para organizar grupos de amigos e atividades.</p>
+            </div>
+            <div class="projeto-item">
+                <h3>Hora de Maratonar</h3>
+                <p>Uma plataforma para catalogar e sugerir filmes e séries.</p>
+            </div>
+            <div class="projeto-item">
+                <h3>Sistema Educacional</h3>
+                <p>Um sistema para gerenciar notas e atividades escolares.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato corpo">
+        <h2>Contato</h2>
+        <p>Você pode entrar em contato comigo através dos seguintes canais:</p>
+        <ul>
+            <li>**Email:** evelyn.dev@email.com</li>
+            <li>**LinkedIn:** [Seu perfil do LinkedIn]</li>
+            <li>**GitHub:** [Seu perfil do GitHub]</li>
+        </ul>
+    </section>
+
+    <footer class="rodape">
+        <p>&copy; 2023 Evelyn. Todos os direitos reservados.</p>
+    </footer>
+</body>
 </html>
