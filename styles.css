@@ -2,36 +2,70 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+html {
+    scroll-behavior: smooth; 
+}
+:root {
+    --escuro: #031716;
+    --secundaria:#032f30;
+    --medio:#0A7075;
+    --claro:#0c969c;
+    --comum:#6ba3be;
+    --simples: #274d60;
 
+
+}
 body {
     font-family: sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--escuro);
+    color: var(--claro);
 }
 
 .cabecalho {
-    background-color: #333;
-    color: #fff;
+    background-color: #031716bb;
     padding: 1rem 0;
-    position: fixed;
-    width: 100%;
+    position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    border-bottom: 4px solid var(--secondary-color);
 }
 
 .navegacao {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-profile {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 1001;
+}
+
+.header-profile.visible {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+    width: 95%;
+}
+
+.header-foto-perfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .menu {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
 }
@@ -40,12 +74,11 @@ body {
     color: #fff;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    transition: color 0.3s ease, transform 0.3s ease-in-out; /* Adicionada transição para o transform */
+    transition: color 0.3s ease, transform 0.3s ease-in-out; /* Adiciona transição para a cor e o transform */
 }
 
-/* Nova animação de pulse para os links do menu */
 .menu-link:hover {
-    color: #ddd;
+    color: var(--comum); /* Cor que aparece ao passar o mouse */
     transform: scale(1.05); /* Leve aumento ao passar o mouse */
 }
 
@@ -57,9 +90,9 @@ body {
 
 .inicio-content {
     display: flex;
-    align-items: center;
+    align-items: center; 
     justify-content: flex-start;
-    gap: 80px;
+    gap: 80px; 
     padding: 60px 0;
 }
 
@@ -69,17 +102,22 @@ body {
 }
 
 .profile-image-container {
-    width: 250px;
-    height: 250px;
+    width: 250px; 
+    height: 250px; 
     border-radius: 50%;
     overflow: hidden;
     border: 5px solid #ddd;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; /* Adiciona transição para o transform */
     flex-shrink: 0;
 }
 
 .profile-image-container:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Aumenta a foto em 10% */
+}
+
+.profile-image-container.faded {
+    opacity: 0.3;
+    transform: scale(0.95);
 }
 
 .foto-perfil {
@@ -89,7 +127,7 @@ body {
 }
 
 #sobre, #habilidades, #projetos, #contato {
-    background-color: #fff;
+    background-color: var(--medio);
     padding: 30px;
     margin-bottom: 20px;
     border-radius: 8px;
@@ -109,12 +147,11 @@ body {
     background-color: #eee;
     padding: 8px 15px;
     border-radius: 5px;
-    transition: transform 0.3s ease-in-out; /* Adicionada transição */
+    transition: transform 0.3s ease-in-out; /* Adiciona transição para o transform */
 }
 
-/* Nova animação de pulse para os itens de habilidades */
 .habilidades ul li:hover {
-    transform: scale(1.1); /* Leve aumento ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o item em 10% */
 }
 
 .projetos {
@@ -133,12 +170,11 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease-in-out; /* Adicionada transição */
+    transition: transform 0.3s ease-in-out; /* Adiciona transição para o transform */
 }
 
-/* Nova animação de pulse para os itens de projetos */
 .projeto-item:hover {
-    transform: scale(1.02); /* Leve aumento ao passar o mouse */
+    transform: scale(1.02); /* Aumenta o item em 2% */
 }
 
 .rodape {
